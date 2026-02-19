@@ -1,0 +1,8 @@
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=
+DB_NAME=salon_db
+PORT=3001
+JWT_SECRET=tvoja_skrivnost
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD_HASH=
