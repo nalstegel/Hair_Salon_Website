@@ -1,6 +1,6 @@
 import React from 'react';
 import barvanjeImg1 from '../assets/barvanje_1.png'; 
-import barvanjeImg2 from '../assets/barvanje_2.png';
+import barvanjeImg2 from '../assets/barvanje_2.jpeg';
 import { useLanguage } from '../context/LanguageContext'; 
 
 const ColourService = () => {

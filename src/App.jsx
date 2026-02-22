@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Outlet } from 'react-router-dom'; // Dodan Outlet
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Services from './pages/Services';
@@ -16,7 +16,6 @@ import { LanguageProvider } from './context/LanguageContext';
 import Login from './admin/Login';
 import ProtectedRoute from './admin/ProtectedRoute';
 import AdminBlog from './admin/AdminBlog';
-
 
 const ScrollToHashElement = () => {
   const { hash } = useLocation();
@@ -35,23 +34,35 @@ const ScrollToHashElement = () => {
   return null;
 };
 
+const PublicLayout = () => {
+  return (
+    <>
+      <Navbar />
+      <Outlet />
+      <Footer />
+    </>
+  );
+};
+
 function App() {
   return (
     <LanguageProvider>
       <BrowserRouter>
         <ScrollToHashElement />
         <div className="App flex-wrapper">
-          <Navbar />
-          
           <main className="main-content">
+            
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/storitve" element={<Services />} />
-              <Route path="/o-nas" element={<About />} />
-              <Route path="/darila" element={<Gifts />} />
-              <Route path="/rezervacija" element={<Booking />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:id" element={<BlogPost />} />
+              <Route element={<PublicLayout />}>
+                <Route path="/" element={<Home />} />
+                <Route path="/storitve" element={<Services />} />
+                <Route path="/o-nas" element={<About />} />
+                <Route path="/darila" element={<Gifts />} />
+                <Route path="/rezervacija" element={<Booking />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:id" element={<BlogPost />} />
+              </Route>
+
               <Route path="/login" element={<Login />} />
 
               <Route element={<ProtectedRoute />}>
@@ -64,8 +75,6 @@ function App() {
             </Routes>
             
           </main>
-          
-          <Footer />
         </div>
       </BrowserRouter>
     </LanguageProvider>
