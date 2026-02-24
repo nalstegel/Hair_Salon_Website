@@ -18,7 +18,7 @@ import ProtectedRoute from './admin/ProtectedRoute';
 import AdminBlog from './admin/AdminBlog';
 
 const ScrollToHashElement = () => {
-  const { hash } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
     if (hash) {
@@ -29,7 +29,7 @@ const ScrollToHashElement = () => {
     } else {
       window.scrollTo(0, 0); 
     }
-  }, [hash]);
+  }, [pathname, hash]);
 
   return null;
 };

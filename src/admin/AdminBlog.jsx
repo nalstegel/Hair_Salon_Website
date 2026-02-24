@@ -191,33 +191,35 @@ const AdminBlog = () => {
 
       {/* SEZNAM ČLANKOV */}
       <div className="table-card">
-        <table className="admin-table full-width">
-            <thead>
-                <tr>
-                    <th style={{width:'80px'}}>Slika</th>
-                    <th>Naslov (SL)</th>
-                    <th>Datum</th>
-                    <th>Kategorija</th>
-                    <th style={{textAlign:'right'}}>Akcije</th>
-                </tr>
-            </thead>
-            <tbody>
-                {posts.map(post => (
-                    <tr key={post.id}>
-                        <td>
-                            <img src={post.image} alt="" className="table-img" />
-                        </td>
-                        <td className="table-title">{post.title_sl}</td>
-                        <td className="table-date">{post.date}</td>
-                        <td><span className="service-badge">{post.category}</span></td>
-                        <td style={{textAlign:'right'}}>
-                            <button className="action-btn edit" onClick={() => openEditModal(post)}>✎</button>
-                            <button className="action-btn delete" onClick={() => handleDelete(post.id)}>✕</button>
-                        </td>
+        <div className="table-responsive">
+            <table className="admin-table full-width">
+                <thead>
+                    <tr>
+                        <th style={{width:'80px'}}>Slika</th>
+                        <th>Naslov (SL)</th>
+                        <th>Datum</th>
+                        <th>Kategorija</th>
+                        <th style={{textAlign:'right'}}>Akcije</th>
                     </tr>
-                ))}
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    {posts.map(post => (
+                        <tr key={post.id}>
+                            <td>
+                                <img src={post.image} alt="" className="table-img" />
+                            </td>
+                            <td className="table-title">{post.title_sl}</td>
+                            <td className="table-date">{post.date}</td>
+                            <td><span className="service-badge">{post.category}</span></td>
+                            <td style={{textAlign:'right'}}>
+                                <button className="action-btn edit" onClick={() => openEditModal(post)}>✎</button>
+                                <button className="action-btn delete" onClick={() => handleDelete(post.id)}>✕</button>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
       </div>
     </div>
   );

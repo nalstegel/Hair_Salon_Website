@@ -41,8 +41,7 @@ const Dashboard = () => {
   return (
     <div className="admin-page">
       <header className="admin-header">
-        <h1>Pregled Salona</h1>
-        <p className="admin-subtitle">Dobrodošli v nadzorni plošči.</p>
+        <h1>Pregled rezervacij & blogov</h1>
       </header>
 
       <div className="stats-grid">

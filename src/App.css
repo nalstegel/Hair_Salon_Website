@@ -17,8 +17,8 @@ body {
   background-color: #ffffff;
   color: #222222; 
   overflow-x: hidden;
-  line-height: 1.6; /* Dodan splošen razmik vrstic za berljivost */
-  -webkit-font-smoothing: antialiased; /* Naredi pisavo bolj gladko in ostro */
+  line-height: 1.6; 
+  -webkit-font-smoothing: antialiased; 
 }
 
 /* --- NAVIGACIJA --- */
@@ -32,7 +32,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08); /* Malo močnejša senca */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08); 
 }
 
 .navbar-left-group {
@@ -90,7 +90,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  border-left: 2px solid #eeeeee; /* Malo debelejša črta */
+  border-left: 2px solid #eeeeee; 
   padding-left: 30px;
   height: 30px;
 }
@@ -100,9 +100,9 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.75rem; /* Povečano */
-  font-weight: 700; /* Ojačano */
-  color: #777777; /* Temnejša siva */
+  font-size: 0.75rem; 
+  font-weight: 700; 
+  color: #777777; 
   letter-spacing: 1px;
   transition: all 0.3s ease;
 }
@@ -113,7 +113,7 @@ body {
 
 .lang-link.active {
   color: #000000;
-  font-weight: 800; /* Aktivni jezik zelo krepak */
+  font-weight: 800; 
 }
 
 .lang-flag {
@@ -124,7 +124,7 @@ body {
 }
 
 .lang-separator {
-  color: #bbbbbb; /* Temnejša ločnica */
+  color: #bbbbbb; 
   font-size: 0.7rem;
   margin: 0 2px;
 }
@@ -137,7 +137,7 @@ body {
   transform: translateX(-50%) translateY(15px);
   background-color: #ffffff;
   min-width: 220px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Močnejša senca */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
   list-style: none;
   padding: 15px 0;
   opacity: 0;
@@ -146,7 +146,7 @@ body {
   z-index: 100;
   display: flex;
   flex-direction: column;
-  border-top: 3px solid #000; /* Poudarek na vrhu menija */
+  border-top: 3px solid #000; 
 }
 
 .nav-item.has-dropdown:hover .dropdown-menu {
@@ -158,8 +158,8 @@ body {
 .dropdown-menu a {
   display: block;
   padding: 12px 25px;
-  font-size: 0.8rem; /* Povečano */
-  color: #333333; /* Temnejša barva */
+  font-size: 0.8rem; 
+  color: #333333; 
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -176,13 +176,13 @@ body {
 /* --- GUMB 'BOOK ONLINE' --- */
 .nav-book-btn {
   text-decoration: none;
-  font-size: 0.8rem; /* Povečano */
-  font-weight: 700; /* Ojačano */
+  font-size: 0.8rem; 
+  font-weight: 700; 
   letter-spacing: 1.5px;
   text-transform: uppercase;
   background-color: #000000;
   color: #ffffff !important;
-  padding: 12px 24px; /* Malo večji gumb */
+  padding: 12px 24px; 
   border-radius: 2px;
   transition: background-color 0.3s ease;
   cursor: pointer;
@@ -201,8 +201,8 @@ body {
 
 .bar {
   display: block;
-  width: 28px; /* Malo širše */
-  height: 3px; /* Malo debelejše */
+  width: 28px; 
+  height: 3px; 
   margin: 6px auto;
   background-color: #000000;
   transition: all 0.3s ease;
@@ -250,20 +250,20 @@ body {
   font-weight: 600; /* SPREMEMBA: Iz 300 na 600 (Bold) */
   margin-bottom: 40px;
   text-transform: uppercase;
-  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); /* Močnejša senca */
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); 
 }
 
 .book-btn {
   background-color: rgba(0,0,0,0.3); 
   color: #ffffff;
-  border: 2px solid #ffffff; /* Debelejši rob */
+  border: 2px solid #ffffff; 
   padding: 18px 40px;
-  font-size: 0.95rem; /* Večja pisava */
+  font-size: 0.95rem; 
   letter-spacing: 2.5px;
   cursor: pointer;
   transition: all 0.4s ease;
   text-transform: uppercase;
-  font-weight: 700; /* Ojačano */
+  font-weight: 700; 
   text-decoration: none;
   display: inline-block;
 }
@@ -298,13 +298,13 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 25px;
-  color: #000000; /* Čista črna */
+  color: #000000; 
 }
 
 .home-subtitle {
   font-size: 1.2rem;
-  font-weight: 700; /* Zelo krepko */
-  color: #222222; /* Temno siva, skoraj črna */
+  font-weight: 700; 
+  color: #222222; 
   line-height: 1.6;
   margin-bottom: 30px;
   letter-spacing: 1px;
@@ -332,12 +332,12 @@ body {
   min-width: 300px;
   background-color: #f8f8f8; 
   padding: 50px 40px;
-  border-top: 3px solid #000000; /* Debelejša črta */
+  border-top: 3px solid #000000; 
 }
 
 .home-list-box h4 {
-  font-size: 1rem; /* Povečano */
-  font-weight: 800; /* Zelo krepko */
+  font-size: 1rem; 
+  font-weight: 800; 
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 30px;
@@ -385,13 +385,11 @@ body {
 }
 
 .custom-list li::before {
-  content: '';
+  content: '✂️'; 
   position: absolute;
   left: 0;
-  top: 10px;
-  width: 10px; /* Malo večja črtica */
-  height: 2px; /* Debelejša črtica */
-  background-color: #000000;
+  top: 0px; 
+  font-size: 1.1rem; 
 }
 
 .section-divider {
@@ -416,10 +414,10 @@ body {
 .philosophy-label {
   display: block;
   font-size: 0.9rem;
-  font-weight: 700; /* Ojačano */
+  font-weight: 700; 
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #555555; /* Temnejše */
+  color: #555555; 
   margin-bottom: 15px;
 }
 
@@ -428,7 +426,7 @@ body {
   font-family: 'Times New Roman', serif;
   font-style: italic;
   font-weight: 500;
-  color: #000000; /* Črna */
+  color: #000000; 
   line-height: 1.5;
 }
 
@@ -458,7 +456,7 @@ body {
 .service-intro {
   font-size: 1.15rem;
   font-weight: 500; /* SPREMEMBA: 400 -> 500 */
-  color: #333333; /* Temnejše */
+  color: #333333; 
   text-align: center;
   max-width: 700px;
   margin: 0 auto 60px auto;
@@ -478,12 +476,12 @@ body {
 
 .service-box h4 {
   font-size: 1rem;
-  font-weight: 800; /* Zelo krepko */
+  font-weight: 800; 
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 25px;
   color: #000000;
-  border-bottom: 2px solid #ccc; /* Debelejša črta */
+  border-bottom: 2px solid #ccc; 
   padding-bottom: 10px;
 }
 
@@ -519,7 +517,7 @@ body {
   font-size: 1.4rem;
   font-weight: 500; /* SPREMEMBA: 300 -> 500 */
   line-height: 1.8;
-  color: #111111; /* Črna */
+  color: #111111; 
   text-align: center;
   padding: 0 20px;
   font-style: italic;
@@ -576,8 +574,8 @@ body {
 
 .split-intro {
   font-size: 1.15rem;
-  font-weight: 400; /* Regular */
-  color: #333333; /* Temno siva */
+  font-weight: 400; 
+  color: #333333;  
   line-height: 1.7;
   text-align: left;
   max-width: 500px;
@@ -592,7 +590,7 @@ body {
 
 .split-subtitle {
   font-size: 0.95rem;
-  font-weight: 800; /* Zelo krepko */
+  font-weight: 800; 
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 20px;
@@ -626,7 +624,7 @@ body {
 
 /* --- SPECIAL EXPERIENCE (Temna sekcija) --- */
 .special-section {
-  background-color: #111111; /* Temnejša črna */
+  background-color: #111111; 
   color: #ffffff;
   padding: 120px 20px;
   display: flex;
@@ -649,11 +647,11 @@ body {
   color: #d5c5b3;
   padding: 8px 20px;
   font-size: 0.8rem;
-  font-weight: 700; /* Ojačano */
+  font-weight: 700;
   letter-spacing: 4px;
   text-transform: uppercase;
   margin-bottom: 30px;
-  background: rgba(213, 197, 179, 0.1); /* Rahlo ozadje */
+  background: rgba(213, 197, 179, 0.1); 
 }
 
 .special-main-title {
@@ -674,7 +672,7 @@ body {
   flex: 1;
   background-color: #1a1a1a;
   padding: 50px 40px;
-  border-top: 3px solid #d5c5b3; /* Debelejši rob */
+  border-top: 3px solid #d5c5b3; 
   position: relative;
   overflow: hidden;
   display: flex;
@@ -741,19 +739,17 @@ body {
   padding-left: 25px;
   margin-bottom: 15px;
   font-size: 1rem;
-  font-weight: 400; /* Regular */
-  color: #dddddd; /* Zelo svetlo siva */
+  font-weight: 400; 
+  color: #dddddd; 
   line-height: 1.6;
 }
 
 .special-list li::before {
-  content: '';
+  content: '✂️'; 
   position: absolute;
   left: 0;
-  top: 10px;
-  width: 10px;
-  height: 2px;
-  background-color: #d5c5b3;
+  top: 0px; 
+  font-size: 1.1rem; 
 }
 
 .special-highlight {
@@ -819,7 +815,7 @@ body {
 .main-content { flex: 1; }
 
 .footer-section {
-  background-color: #000000; /* Čista črna */
+  background-color: #000000; 
   color: #ffffff;
   padding: 80px 20px 20px 20px;
   font-size: 0.9rem;
@@ -850,14 +846,14 @@ body {
 }
 
 .footer-column p {
-  color: #cccccc; /* Svetlejša siva */
+  color: #cccccc; 
   line-height: 2;
   margin-bottom: 5px;
   font-weight: 400;
 }
 
 .footer-column .day {
-  color: #ffffff; /* Poudarjeni dnevi */
+  color: #ffffff; 
   display: inline-block;
   width: 140px;
   font-weight: 600;
@@ -977,9 +973,9 @@ body {
 
 .about-paragraph {
   font-size: 1.1rem;
-  font-weight: 400; /* Regular */
+  font-weight: 400; 
   line-height: 1.8;
-  color: #333333; /* Temno siva */
+  color: #333333; 
   margin-bottom: 40px;
 }
 
@@ -992,7 +988,7 @@ body {
 
 .about-subtitle {
   font-size: 1rem;
-  font-weight: 800; /* Zelo krepko */
+  font-weight: 800; 
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -1050,16 +1046,17 @@ body {
 
 .achievements-list li {
   font-size: 1.1rem;
-  font-weight: 500; /* Medium */
+  font-weight: 500;
   color: #222222;
   padding-left: 25px;
 }
 
 .achievements-list li::before {
-  background-color: #d5c5b3;
-  width: 12px;
-  top: 10px;
-  height: 2px;
+  content: '✂️'; 
+  position: absolute;
+  left: 0;
+  top: 0px;
+  font-size: 1.1rem; 
 }
 
 .achievements-conclusion {
@@ -1419,7 +1416,7 @@ body {
 .blog-date {
   display: block;
   font-size: 0.8rem;
-  color: #666; /* Temnejša siva */
+  color: #666; 
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 10px;
@@ -1430,7 +1427,7 @@ body {
   font-size: 1.5rem;
   line-height: 1.3;
   margin-bottom: 15px;
-  font-weight: 700; /* Ojačano */
+  font-weight: 700; 
   text-transform: uppercase;
 }
 
@@ -1446,10 +1443,10 @@ body {
 
 .blog-excerpt {
   font-size: 1rem;
-  color: #333333; /* Temnejše */
+  color: #333333; 
   line-height: 1.6;
   margin-bottom: 20px;
-  font-weight: 400; /* Regular */
+  font-weight: 400; 
 }
 
 .blog-read-more {
@@ -1461,7 +1458,7 @@ body {
   letter-spacing: 2px;
   color: #000000;
   text-decoration: none;
-  font-weight: 800; /* Zelo krepko */
+  font-weight: 800; 
   border-bottom: 2px solid transparent;
   padding-bottom: 2px;
   transition: all 0.3s;
@@ -1527,7 +1524,7 @@ body {
 .post-title {
   font-size: 3rem;
   line-height: 1.2;
-  font-weight: 700; /* Ojačano */
+  font-weight: 700; 
   color: #000;
 }
 
@@ -1547,10 +1544,10 @@ body {
 .post-content {
   max-width: 680px;
   margin: 0 auto;
-  font-size: 1.15rem; /* Povečano */
+  font-size: 1.15rem; 
   line-height: 1.8;
-  color: #222; /* Skoraj črna */
-  font-weight: 400; /* Regular */
+  color: #222; 
+  font-weight: 400; 
 }
 
 .post-content p {
@@ -1588,7 +1585,7 @@ body {
 
 .pricing-section {
   padding: 80px 20px;
-  background-color: #faf9f8; /* Zelo nežna topla bela za prestižen izgled */
+  background-color: #faf9f8;
 }
 
 .pricing-container {
@@ -1610,7 +1607,7 @@ body {
 }
 
 .pricing-subtitle {
-  color: #d4a373; /* Zlata/peščena barva salona */
+  color: #d4a373; 
   font-size: 1.1rem;
   font-style: italic;
   font-family: serif;
@@ -1624,7 +1621,7 @@ body {
 
 .pricing-category {
   margin-bottom: 20px;
-  opacity: 0; /* Začetno stanje za animacijo */
+  opacity: 0; 
   animation: fadeInPricing 0.8s ease-out forwards;
 }
 
@@ -1658,7 +1655,6 @@ body {
   font-weight: 500;
 }
 
-/* To ustvari pikice med imenom in ceno */
 .item-leader {
   flex-grow: 1;
   border-bottom: 1px dotted #ccc;
@@ -1674,7 +1670,6 @@ body {
   white-space: nowrap;
 }
 
-/* Animacija za prikazovanje kategorij */
 @keyframes fadeInPricing {
   from { 
       opacity: 0; 
@@ -1685,6 +1680,18 @@ body {
       transform: translateY(0); 
   }
 }
+
+@keyframes fadeInDropdown { 
+  from { 
+    opacity: 0; 
+    transform: translateY(-10px); 
+  } to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  } 
+}
+
+
 /*-----ADMIN PANEL------*/
 .admin-wrapper {
   display: flex;
@@ -1761,7 +1768,12 @@ body {
   margin-left: 260px;
   padding: 50px;
 }
-
+.admin-mobile-topbar {
+  display: none;
+}
+.admin-menu-overlay {
+  display: none;
+}
 .admin-header { margin-bottom: 40px; }
 .admin-header h1 { font-size: 2.2rem; color: #111; margin-bottom: 5px; font-weight: 700; }
 .admin-subtitle { color: #444; font-weight: 500;}
@@ -1944,12 +1956,22 @@ body {
     visibility: visible;
     box-shadow: none;
     background-color: #fcfcfc;
-    display: none;
+    display: none; 
   }
 
-  .navbar-links.active .dropdown-menu {
+  .nav-item.mobile-dropdown-open .dropdown-menu {
     display: flex;
+    flex-direction: column;
+    width: 100%;
     margin-top: 10px;
+    animation: fadeInDropdown 0.3s ease; 
+  }
+
+  .nav-item.has-dropdown:hover .dropdown-menu {
+    display: none;
+  }
+  .nav-item.has-dropdown.mobile-dropdown-open:hover .dropdown-menu {
+    display: flex;
   }
 
   .hero-section {
@@ -2146,19 +2168,111 @@ body {
     .category-title {
         font-size: 1.2rem;
     }
+  /* =======================================================
+   ADMIN PANEL - MOBILNA VERZIJA
+   ======================================================= */
+  
+  .admin-wrapper {
+    flex-direction: column !important; 
+  }
 
-  .admin-sidebar { width: 70px; padding: 20px 10px; }
-  .admin-logo h2, .admin-link span:not(.icon), .logout-btn { display: none; }
-  .admin-content { margin-left: 70px; padding: 20px; }
-  .admin-link { justify-content: center; }
-  .table-responsive { overflow-x: auto; }
+  .admin-mobile-topbar {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111111 !important;
+    padding: 15px 20px !important;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1000;
+  }
 
-  .pricing-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  .admin-mobile-topbar h2 {
+    font-size: 1.2rem !important;
+    letter-spacing: 2px;
+    margin: 0;
+    color: #ffffff !important;
+  }
+
+  .admin-hamburger {
+    cursor: pointer;
+    width: 30px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1001;
+  }
+
+  
+  .admin-hamburger .bar {
+    display: block;
+    height: 3px !important;
+    width: 100% !important;
+    background-color: #ffffff !important;
+    margin: 0 !important; 
+    transition: all 0.3s ease;
+  }
+
+  .admin-hamburger.open .bar:nth-child(1) { transform: translateY(10.5px) rotate(45deg); }
+  .admin-hamburger.open .bar:nth-child(2) { opacity: 0; }
+  .admin-hamburger.open .bar:nth-child(3) { transform: translateY(-10.5px) rotate(-45deg); }
+
+  .admin-sidebar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 260px !important; 
+    transform: translateX(-100%); 
+    transition: transform 0.3s ease-in-out;
+    z-index: 1050; 
+  }
+
+  .admin-sidebar.mobile-open {
+    transform: translateX(0) !important;
+  }
+
+  .admin-logo h2, 
+  .admin-link span:not(.icon), 
+  .logout-btn { 
+    display: inline-block !important; 
   }
   
-  .pricing-title {
-    font-size: 2rem;
+  .admin-link { 
+    justify-content: flex-start !important; 
+  }
+
+  .admin-content { 
+    margin-left: 0 !important; 
+    width: 100% !important; 
+    padding: 20px 15px !important; 
+    box-sizing: border-box;
+  }
+
+  .admin-menu-overlay {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1040;
+  }
+
+  .stats-grid { grid-template-columns: 1fr; }
+  .admin-header h1 { font-size: 1.6rem; }
+  
+  .table-responsive { 
+    width: 100%;
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
+  }
+  
+  .admin-table th, .admin-table td {
+    padding: 10px;
+    white-space: nowrap; 
   }
 }

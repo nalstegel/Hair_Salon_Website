@@ -155,45 +155,47 @@ const AdminReservations = () => {
         <div className="loading-state">Nalaganje podatkov ...</div>
       ) : (
         <div className="table-card">
-          <table className="admin-table full-width">
-            <thead>
-              <tr>
-                <th>Stranka</th>
-                <th>Kontakt</th>
-                <th>Storitev</th>
-                <th>Strokovnjak</th> 
-                <th>Datum termina</th>
-                <th>Ura</th>
-                <th>Oddano</th>
-                <th style={{textAlign: 'right'}}>Akcije</th>
-              </tr>
-            </thead>
-            <tbody>
-              {data.map((item) => (
-                <tr key={item.id}>
-                  <td><div className="client-name">{item.name}</div></td>
-                  <td><div className="contact-info"><span>📞 {item.phone}</span></div></td>
-                  <td><span className="service-badge">{item.service}</span></td>
-                  <td><span style={{fontWeight: '500'}}>{item.expert || "/"}</span></td>
-                  <td>{formatDate(item.date)}</td>
-                  <td>{formatTime(item.time)}</td>
-                  <td style={{fontSize: '0.85rem', color: '#666'}}>{formatFullDate(item.created_at)}</td>
-                  <td style={{textAlign: 'right'}}>
-                    <button className="action-btn edit" onClick={() => handleEditClick(item)}>✎</button>
-                    <button className="action-btn delete" onClick={() => handleDelete(item.id)}>✕</button>
-                  </td>
-                </tr>
-              ))}
-              
-              {data.length === 0 && (
+          <div className="table-responsive">
+            <table className="admin-table full-width">
+              <thead>
                 <tr>
-                  <td colSpan="8" style={{textAlign:'center', padding:'30px'}}>
-                    Ni še nobenih rezervacij v bazi.
-                  </td>
+                  <th>Stranka</th>
+                  <th>Kontakt</th>
+                  <th>Storitev</th>
+                  <th>Strokovnjak</th> 
+                  <th>Datum termina</th>
+                  <th>Ura</th>
+                  <th>Oddano</th>
+                  <th style={{textAlign: 'right'}}>Akcije</th>
                 </tr>
-              )}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {data.map((item) => (
+                  <tr key={item.id}>
+                    <td><div className="client-name">{item.name}</div></td>
+                    <td><div className="contact-info"><span>📞 {item.phone}</span></div></td>
+                    <td><span className="service-badge">{item.service}</span></td>
+                    <td><span style={{fontWeight: '500'}}>{item.expert || "/"}</span></td>
+                    <td>{formatDate(item.date)}</td>
+                    <td>{formatTime(item.time)}</td>
+                    <td style={{fontSize: '0.85rem', color: '#666'}}>{formatFullDate(item.created_at)}</td>
+                    <td style={{textAlign: 'right'}}>
+                      <button className="action-btn edit" onClick={() => handleEditClick(item)}>✎</button>
+                      <button className="action-btn delete" onClick={() => handleDelete(item.id)}>✕</button>
+                    </td>
+                  </tr>
+                ))}
+                
+                {data.length === 0 && (
+                  <tr>
+                    <td colSpan="8" style={{textAlign:'center', padding:'30px'}}>
+                      Ni še nobenih rezervacij v bazi.
+                    </td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
     </div>
