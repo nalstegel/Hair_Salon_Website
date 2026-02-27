@@ -220,6 +220,54 @@ app.delete('/api/blog/:id', authenticateToken, (req, res) => {
     });
 });
 
+// LOYALTY API 
+app.get('/api/loyalty', authenticateToken, (req, res) => {
+    const sql = "SELECT * FROM loyalty_user ORDER BY sum_spent DESC";
+    db.query(sql, (err, data) => {
+        if(err) {
+            console.error("Napaka pri branju loyalty baze:", err);
+            return res.status(500).json("Napaka pri branju");
+        }
+        return res.json(data);
+    });
+});
+
+app.post('/api/loyalty', authenticateToken, (req, res) => {
+    const { name, surname, address, email, tel_number, sum_spent } = req.body;
+    const sql = `INSERT INTO loyalty_user (name, surname, address, email, tel_number, sum_spent) VALUES (?, ?, ?, ?, ?, ?)`;
+    
+    db.query(sql, [name, surname, address, email, tel_number, sum_spent || 0], (err, result) => {
+        if (err) {
+            console.error("Napaka pri dodajanju loyalty stranke:", err);
+            return res.status(500).send('Napaka pri shranjevanju v bazo.');
+        }
+        res.status(200).send('Stranka uspešno dodana!');
+    });
+});
+
+app.put('/api/loyalty/:id', authenticateToken, (req, res) => {
+    const id = req.params.id;
+    const { name, surname, address, email, tel_number, sum_spent } = req.body;
+
+    const sql = "UPDATE loyalty_user SET name=?, surname=?, address=?, email=?, tel_number=?, sum_spent=? WHERE id=?";
+    db.query(sql, [name, surname, address, email, tel_number, sum_spent, id], (err, result) => {
+        if (err) {
+            console.error("Napaka pri posodabljanju loyalty stranke:", err);
+            return res.status(500).send("Napaka pri posodabljanju");
+        }
+        res.send("Uspešno posodobljeno");
+    });
+});
+
+app.delete('/api/loyalty/:id', authenticateToken, (req, res) => {
+    const id = req.params.id;
+    const sql = "DELETE FROM loyalty_user WHERE id = ?";
+    db.query(sql, [id], (err, result) => {
+        if (err) return res.status(500).send("Napaka pri brisanju");
+        res.send("Uspešno izbrisano");
+    });
+});
+
 app.listen(PORT, () => {
     console.log(`Backend strežnik teče na http://localhost:${PORT}`);
 });

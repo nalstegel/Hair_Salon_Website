@@ -60,7 +60,7 @@ body {
   justify-content: flex-end;
   align-items: center;
   gap: 40px;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   margin-left: auto;
 }
 
@@ -378,18 +378,25 @@ body {
   position: relative;
   padding-left: 25px;
   margin-bottom: 15px;
-  font-size: 1rem; /* Povečano iz 0.9rem */
-  font-weight: 500; /* SPREMEMBA: Iz 300 na 500 (Medium) */
-  color: #222222; /* SPREMEMBA: Iz #555 na #222 (Skoraj črna) */
+  font-size: 1rem; 
+  font-weight: 500; 
+  color: #222222; 
   line-height: 1.6;
 }
 
 .custom-list li::before {
-  content: '✂️'; 
+  content: ''; 
   position: absolute;
   left: 0;
-  top: 0px; 
-  font-size: 1.1rem; 
+  top: 6px; 
+  width: 18px; 
+  height: 18px; 
+  background-image: url('./assets/dot_logo.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
 
 .section-divider {
@@ -544,7 +551,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: #f0f0f0;
+  background-color: #f9f9f9;
   padding: 0;
   justify-content: center;
   min-width: 0;
@@ -682,12 +689,6 @@ body {
   z-index: 1;
 }
 
-.special-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9);
-  z-index: 10;
-  border-top-color: #ffffff;
-}
 
 .special-card-title {
   font-size: 1.6rem;
@@ -700,10 +701,6 @@ body {
   z-index: 10;
   transition: color 0.3s ease;
   text-shadow: 0 2px 4px rgba(0,0,0,0.5); 
-}
-
-.special-card:hover .special-card-title {
-  color: #ffffff;
 }
 
 .special-card-content {
@@ -745,11 +742,18 @@ body {
 }
 
 .special-list li::before {
-  content: '✂️'; 
+  content: ''; 
   position: absolute;
   left: 0;
-  top: 0px; 
-  font-size: 1.1rem; 
+  top: 6px; 
+  width: 18px; 
+  height: 18px; 
+  background-image: url('./assets/dot_logo.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
 
 .special-highlight {
@@ -762,6 +766,24 @@ body {
   margin-top: 30px;
 }
 
+/* --- HOVER EFEKTI ZA SPECIAL EXPERIENCE (Samo za miško) --- */
+@media (hover: hover) {
+  .special-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    border-top-color: #ffffff;
+  }
+
+  .special-card:hover .special-card-title {
+    color: #ffffff;
+  }
+
+  .special-card:hover .card-reveal-curtain {
+    transform: translateY(0);
+  }
+}
+
 .card-reveal-curtain {
   position: absolute;
   top: 0;
@@ -771,10 +793,6 @@ body {
   z-index: 5;
   transform: translateY(100%);
   transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.special-card:hover .card-reveal-curtain {
-  transform: translateY(0);
 }
 
 .curtain-img {
@@ -1011,10 +1029,6 @@ body {
   font-weight: 400;
 }
 
-.about-highlight .custom-list li::before {
-  background-color: #d5c5b3;
-}
-
 /* --- DOSEŽKI --- */
 .achievements-section {
   padding: 100px 20px;
@@ -1052,11 +1066,18 @@ body {
 }
 
 .achievements-list li::before {
-  content: '✂️'; 
+  content: ''; 
   position: absolute;
   left: 0;
-  top: 0px;
-  font-size: 1.1rem; 
+  top: 6px; 
+  width: 18px; 
+  height: 18px; 
+  background-image: url('./assets/dot_logo.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
 
 .achievements-conclusion {
@@ -1329,7 +1350,7 @@ body {
 
 /* --- BLOG STRAN --- */
 .blog-header-section {
-  padding: 120px 20px 60px 20px;
+  padding: 20px 20px 20px 20px;
   text-align: center;
   background-color: #ffffff;
 }
@@ -1579,10 +1600,120 @@ body {
   margin: 80px auto 0 auto;
 }
 
+/* --- POP-UP ZA TELEFONSKI KLIC --- */
+button.nav-book-btn, 
+button.book-btn {
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.phone-modal-content {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 450px;
+  margin: 0 auto; 
+}
+
+.phone-modal-title {
+  margin-bottom: 15px;
+  color: #111111;
+}
+
+.phone-modal-text {
+  font-size: 1.1rem;
+  color: #444444;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.phone-modal-link {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111111;
+  text-decoration: none;
+  margin-bottom: 30px;
+  padding: 12px 25px;
+  border: 2px solid #d5c5b3;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+@media (hover: hover) {
+  .phone-modal-link:hover {
+    background-color: #d5c5b3;
+    color: #ffffff;
+  }
+}
+
+.phone-modal-link:active {
+  background-color: #d5c5b3;
+  color: #ffffff;
+  transform: scale(0.98); 
+}
+
+.phone-modal-actions {
+  display: flex;
+  justify-content: center;
+}
+
 /* ==========================================================================
    CENIK COMPONENT STYLES
    ========================================================================== */
 
+  .category-title-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff; 
+    color: #333333;
+    padding: 18px 22px;
+    border: 1px solid #eeeeee; 
+    border-radius: 8px; 
+    font-size: 1.05rem;
+    font-family: inherit;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+    margin-bottom: 12px; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02); 
+  }
+
+@media (hover: hover) {
+    .category-title-btn:hover {
+      border-color: #d5c5b3; 
+      box-shadow: 0 4px 12px rgba(213, 197, 179, 0.15); 
+    }
+  }
+
+.pricing-category.open .category-title-btn {
+    background-color: #fbf9f6; 
+    border-color: #d5c5b3; 
+    color: #111111;
+    font-weight: 600;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; 
+    margin-bottom: 15px;
+  }
+
+.category-toggle-icon {
+    font-size: 0.9rem;
+    color: #d5c5b3; 
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+  }
+
+  .pricing-category.open .category-toggle-icon {
+    transform: rotate(-180deg);
+  }
+
+.pricing-list {
+  animation: fadeInList 0.4s ease-out;
+  padding: 0 10px;
+}
 .pricing-section {
   padding: 80px 20px;
   background-color: #faf9f8;
@@ -1637,10 +1768,16 @@ body {
 }
 
 .pricing-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+    animation: fadeInList 1s ease-out;
+    padding: 10px 15px 20px 15px; 
+    background-color: #fbf9f6; 
+    border: 1px solid #d5c5b3;
+    border-top: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-top: -15px; 
+    margin-bottom: 20px;
+  }
 
 .pricing-item {
   display: flex;
@@ -1911,14 +2048,354 @@ body {
 .btn-save { background: #2e7d32; color: white; padding: 10px 25px; border: none; border-radius: 6px; cursor: pointer; font-weight: 700; }
 .btn-cancel { background: #757575; color: white; padding: 10px 25px; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; }
 
+/* LOYALTY PROGRAM */
+
+.colour-service-wrapper {
+  width: 100%;
+  background-color: #f9f9f9;
+}
+
+.centered-container {
+  margin: 0 auto !important;
+}
+
+.packages-spacing {
+  padding-bottom: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.packages-section {
+  margin-top: 80px;
+  padding-top: 60px;
+  border-top: 1px solid #eeeeee;
+}
+
+.packages-title {
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  color: #111111;
+  font-weight: 700;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  align-items: stretch;
+}
+
+.packages-grid-two {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.package-card {
+  background-color: #ffffff;
+  color: #333333;
+  border: 1px solid #eeeeee;
+  border-top: 5px solid #d5c5b3;
+  border-radius: 12px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease, border-color 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.package-name, .package-price-wrap, .package-price, .package-subtitle, .package-features li, .package-note {
+  transition: color 0.4s ease, background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.package-name {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #111111;
+}
+
+.package-price-wrap {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.package-price {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #111111;
+}
+
+.package-period {
+  font-size: 1rem;
+  color: #777777;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.package-subtitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #555555;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.package-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  flex-grow: 1; 
+}
+
+.package-features li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333333;
+  font-weight: 500;
+}
+
+.package-features li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #d5c5b3;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.package-note {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #777777;
+  text-align: center;
+  margin-top: auto; 
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+@media (hover: hover) {
+  .package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+  }
+
+  .package-card.premium:hover {
+    transform: translateY(-10px) scale(1.05); 
+    background-color: #111111;
+    border-top-color: #d5c5b3;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15); 
+  }
+
+  .package-card.premium:hover .package-name { color: #d5c5b3; }
+  .package-card.premium:hover .package-price-wrap { border-bottom-color: #333333; }
+  .package-card.premium:hover .package-price { color: #ffffff; }
+  .package-card.premium:hover .package-subtitle { color: #aaaaaa; }
+  .package-card.premium:hover .package-features li { color: #dddddd; }
+  .package-card.premium:hover .package-note { background-color: #1a1a1a; color: #aaaaaa; }
+}
+
+.why-choose-club {
+  margin-top: 60px;
+  padding: 50px;
+  background-color: #fbf9f6; 
+  border-radius: 12px;
+  border: 1px solid #d5c5b3;
+  text-align: center;
+}
+
+.why-choose-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  color: #111111;
+}
+
+.why-choose-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px 30px;
+  margin-bottom: 40px;
+}
+
+.why-choose-list li {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+.club-footer-slogan {
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: 500;
+  color: #d5c5b3;
+  border-top: 1px solid #eaddcc;
+  padding-top: 25px;
+  margin: 0;
+}
+
+/* --- ADMIN LOYALTY --- */
+.loyalty-top-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.loyalty-search-input {
+  flex: 1;
+  max-width: 400px;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.loyalty-search-input:focus {
+  border-color: #d5c5b3;
+  box-shadow: 0 0 5px rgba(213, 197, 179, 0.3);
+}
+
+@media (min-width: 901px) {
+
+  .pricing-mobile-accordion {
+    display: none !important;
+  }
+  
+  .pricing-desktop-layout {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+  /* LEVI STOLPEC (Gumbi) */
+  .pricing-sidebar {
+    flex: 0 0 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .desktop-tab-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #ffffff;
+    color: #333333;
+    padding: 20px 25px;
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  }
+
+  .desktop-tab-btn:hover {
+    border-color: #d5c5b3;
+    box-shadow: 0 4px 12px rgba(213, 197, 179, 0.15);
+    transform: translateX(5px); 
+  }
+
+  .desktop-tab-btn.active {
+    background-color: #fbf9f6;
+    border-color: #d5c5b3;
+    color: #111111;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(213, 197, 179, 0.2);
+    transform: translateX(5px); 
+  }
+
+  .desktop-tab-arrow {
+    color: #d5c5b3;
+    font-size: 1.8rem;
+    line-height: 1;
+    transition: transform 0.3s ease;
+  }
+
+  /* DESNI STOLPEC (Cenik) */
+  .pricing-content-panel {
+    flex: 1;
+    background-color: #fbf9f6;
+    border: 1px solid #d5c5b3;
+    border-radius: 12px;
+    padding: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    animation: fadeInPanel 0.4s ease-out;
+  }
+
+  .desktop-category-title {
+    font-size: 1.8rem;
+    color: #111111;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #d5c5b3;
+    padding-bottom: 15px;
+    display: inline-block;
+  }
+
+  .desktop-list {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    margin: 0;
+  }
+  
+  .desktop-list .pricing-item {
+    margin-bottom: 18px;
+  }
+
+  .desktop-list .item-name {
+    font-size: 1.1rem;
+  }
+  
+  .desktop-list .item-price {
+    font-size: 1.15rem;
+  }
+
+  @keyframes fadeInPanel {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
 @media (max-width: 900px) {
+  /* --- NAVBAR & LOGO (Manjši) --- */
   .navbar {
-    padding: 15px 20px;
-    flex-wrap: wrap;
+    padding: 5px 20px; 
+    position: sticky; 
   }
 
   .logo-image {
-    max-width: 110px;
+    max-width: 65px; 
   }
 
   .hamburger {
@@ -1926,45 +2403,84 @@ body {
     margin-bottom: 0;
   }
 
+/* --- MOBILNI MENI (Na desni, točno do logotipa) --- */
   .navbar-links {
-    width: 100%;
+    position: absolute; 
+    top: 100%; 
+    right: 0; 
+    width: 45%; 
+    background-color: #ffffff; 
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.05); 
     flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    align-items: flex-end; 
+    gap: 8px;
     height: 0;
     overflow: hidden;
     opacity: 0;
     margin-top: 0;
+    padding-left: 20px; 
+    padding-right: 20px; 
+    box-sizing: border-box; 
+    border-top: 1px solid #eeeeee; 
+    transition: all 0.3s ease;
+    border-bottom-left-radius: 15px;
   }
 
   .navbar-links.active {
     height: auto;
     opacity: 1;
-    padding-top: 20px;
-    padding-bottom: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
   
+  /* --- POSAMEZNI ELEMENTI MENIJA IN LOČEVALNE ČRTE --- */
   .nav-item {
     flex-direction: column;
     width: 100%;
+    align-items: center; 
+    text-align: right; 
+    border-bottom: 1px solid #f0f0f0; 
+    padding-bottom: 5px; 
+  }
+
+  .navbar-links .nav-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+/* --- GUMB ZA REZERVACIJO (Mobilni meni) --- */
+  .nav-book-btn {
+    width: 100%; 
+    box-sizing: border-box;
+    padding: 12px 10px; 
+    font-size: 0.75rem; 
+    text-align: center; 
+    white-space: normal; 
+    line-height: 1.4;
+    margin-top: 10px; 
+    border-radius: 4px; 
   }
   
   .dropdown-menu {
     position: static;
     transform: none;
-    opacity: 1;
+    opacity: 0.6;
     visibility: visible;
     box-shadow: none;
-    background-color: #fcfcfc;
+    background-color: transparent;
     display: none; 
   }
 
+  /* PADAJOČI MENI ZNOTRAJ MOBILNEGA MENIJA */
   .nav-item.mobile-dropdown-open .dropdown-menu {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100%; 
+    align-items: flex-end;
     margin-top: 10px;
-    animation: fadeInDropdown 0.3s ease; 
+    padding-right: 10px; 
+    border-right: 3px solid #d5c5b3; 
+    animation: fadeInDropdown 0.5s ease; 
   }
 
   .nav-item.has-dropdown:hover .dropdown-menu {
@@ -1974,8 +2490,10 @@ body {
     display: flex;
   }
 
+  /* --- HERO SLIKA (Perfektno zapolni zaslon) --- */
   .hero-section {
-    height: 70vh;
+    height: 100vh; 
+    min-height: 400px;
   }
 
   .hero-overlay h2 {
@@ -1995,17 +2513,44 @@ body {
     gap: 30px;
   }
 
+  /* --- SPLIT LAYOUT (Sekcija Barvanje ipd.) --- */
   .split-layout-section {
-    flex-direction: column;
-  }
-
-  .split-image-side {
-    order: -1;
-    min-height: 400px;
+    flex-direction: column !important;
   }
 
   .split-text-side {
-    padding: 60px 20px;
+    order: 1 !important;
+    padding: 60px 20px 30px 20px !important; 
+    width: 100% !important; 
+  }
+  .split-image-side {
+    order: 2 !important; 
+    display: grid !important; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px; 
+    padding: 0 20px 60px 20px !important;
+    height: auto !important; 
+    min-height: 0 !important;
+    background-color: transparent;
+    width: 100% !important;
+  }
+
+  .split-image-side img:only-child {
+    grid-column: 1 / -1 !important; 
+    width: 100% !important;
+    height: auto !important; 
+    object-fit: cover !important; 
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  }
+
+  /* Prisilimo sliko, da obdrži naravno razmerje */
+  .split-img-half {
+    width: 100% !important; 
+    height: auto !important; 
+    object-fit: contain !important; 
+    aspect-ratio: auto !important; 
+    border-radius: 8px;
   }
 
   .split-title {
@@ -2013,11 +2558,48 @@ body {
   }
 
   .split-layout-section.reverse {
-    flex-direction: column;
+    flex-direction: column !important; 
   }
+  
+  .split-layout-section.reverse .split-text-side {
+    order: 1 !important; 
+  }
+  
+  .split-layout-section.reverse .split-image-side {
+    order: 2 !important; 
+  }
+
   .footer-container {
     flex-direction: column;
     gap: 50px;
+  }
+  /* --- SPECIAL EXPERIENCE (Mobilna kartica) --- */
+  .special-card {
+    padding: 0 !important; 
+    border-top: none; 
+    border-radius: 12px; 
+  }
+
+  .card-reveal-curtain {
+    position: relative !important; 
+    transform: translateY(0) !important; 
+    height: 220px; 
+    order: -1; 
+    width: 100%;
+    border-radius: 12px 12px 0 0; 
+  }
+
+  .curtain-overlay {
+    background: rgba(0, 0, 0, 0.2); 
+  }
+
+  .special-card-title {
+    padding: 25px 25px 0 25px;
+    margin-bottom: 15px;
+  }
+
+  .special-card-content {
+    padding: 0 25px 30px 25px;
   }
 
   .special-grid {
@@ -2156,18 +2738,80 @@ body {
     padding: 0 10px;
   }
 
+  /* --- CENIK MOBILNA VERZIJA --- */
   .pricing-section {
-        padding: 50px 15px;
-    }
-    .item-name {
-        font-size: 0.95rem;
-    }
-    .item-price {
-        font-size: 1rem;
-    }
-    .category-title {
-        font-size: 1.2rem;
-    }
+    padding: 50px 15px;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .pricing-container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .pricing-category {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .category-title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+
+  .pricing-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  .item-name {
+    font-size: 0.95rem;
+    flex-shrink: 1; 
+    white-space: normal;
+    padding-right: 5px;
+  }
+
+  .item-leader {
+    flex-grow: 1; 
+    min-width: 10px; 
+    border-bottom: 1px dotted #ccc;
+    margin: 0 5px;
+  }
+
+  .item-price {
+    font-size: 1rem;
+    flex-shrink: 0; 
+    white-space: nowrap; 
+    font-weight: 600;
+  }
+
+  .pricing-desktop-layout {
+    display: none !important;
+  }
+  .pricing-mobile-accordion {
+    display: block !important;
+  }
+
+  .service-content-wrapper {
+    flex-direction: column !important; 
+    gap: 30px !important;
+  }
+
+
   /* =======================================================
    ADMIN PANEL - MOBILNA VERZIJA
    ======================================================= */
@@ -2205,7 +2849,6 @@ body {
     z-index: 1001;
   }
 
-  
   .admin-hamburger .bar {
     display: block;
     height: 3px !important;
@@ -2275,4 +2918,28 @@ body {
     padding: 10px;
     white-space: nowrap; 
   }
+
+  .why-choose-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .packages-grid-two {
+    grid-template-columns: 1fr !important; 
+  }
+
+  .package-card.premium {
+    background-color: #111111 !important;
+    border-top-color: #d5c5b3 !important;
+    color: #ffffff !important;
+  }
+  .package-card.premium .package-name { color: #d5c5b3 !important; }
+  .package-card.premium .package-price { color: #ffffff !important; }
+  .package-card.premium .package-subtitle { color: #aaaaaa !important; }
+  .package-card.premium .package-features li { color: #dddddd !important; }
+  .package-card.premium .package-note {
+    background-color: #1a1a1a !important;
+    color: #aaaaaa !important;
+  }
+
 }

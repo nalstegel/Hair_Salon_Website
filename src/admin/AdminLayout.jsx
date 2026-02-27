@@ -36,11 +36,21 @@ const AdminLayout = () => {
           <Link to="/admin" className={`admin-link ${isActive('/admin')}`} onClick={closeMenu}>
             <span className="icon">📊</span> Dashboard
           </Link>
+          {/* --- ZAČASNO ONEMOGOČENO ---
           <Link to="/admin/rezervacije" className={`admin-link ${isActive('/admin/rezervacije')}`} onClick={closeMenu}>
             <span className="icon">📅</span> Rezervacije
           </Link>
+          --------------------------------------------- */}
+          {/* ZAČASNO DODAN PRAZEN GUMB */}
+          <div className="admin-link" style={{ opacity: 0.4, cursor: 'not-allowed' }} onClick={(e) => e.preventDefault()}>
+            <span className="icon">📅</span> Rezervacije (Izklopljeno)
+          </div>
+
           <Link to="/admin/blog" className={`admin-link ${isActive('/admin/blog')}`} onClick={closeMenu}>
             <span className="icon">✍️</span> Blog Edit
+          </Link>
+          <Link to="/admin/loyalty" className={`admin-link ${isActive('/admin/loyalty')}`} onClick={closeMenu}>
+            <span className="icon">🏆</span> Loyalty program
           </Link>
         </nav>
 
@@ -49,7 +59,6 @@ const AdminLayout = () => {
         </div>
       </aside>
 
-      {/* NOVO: Zatemnitev ozadja, ko je meni odprt na telefonu */}
       {isMobileMenuOpen && (
         <div className="admin-menu-overlay" onClick={closeMenu}></div>
       )}

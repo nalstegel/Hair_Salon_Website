@@ -36,6 +36,38 @@ const ColourClubService = () => {
           <h3 className="result-text">{t.colourClub.resultText}</h3>
         </div>
 
+        <div className="packages-section">
+          <h3 className="packages-title">{t.colourClub.packagesTitle}</h3>
+          
+          <div className="packages-grid">
+            {t.colourClub.packages.map((pkg, index) => (
+              <div key={index} className={`package-card ${pkg.isPremium ? 'premium' : ''}`}>
+                <h4 className="package-name">{pkg.name}</h4>
+                <div className="package-price-wrap">
+                  <span className="package-price">{pkg.price}</span>
+                  <span className="package-period">{pkg.period}</span>
+                </div>
+                
+                <ul className="package-features">
+                  {pkg.features.map((feature, fIndex) => (
+                    <li key={fIndex}>{feature}</li>
+                  ))}
+                </ul>
+                
+                <p className="package-note">{pkg.note}</p>
+              </div>
+            ))}
+          </div>
+          <div className="why-choose-club">
+            <h4 className="why-choose-title">{t.colourClub.whyChooseTitle}</h4>
+            <ul className="why-choose-list">
+              {t.colourClub.whyChooseList.map((item, index) => (
+                <li key={index}>✓ {item}</li>
+              ))}
+            </ul>
+            <p className="club-footer-slogan">{t.colourClub.footerSlogan}</p>
+          </div>
+        </div>
       </div>
     </section>
   );

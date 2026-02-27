@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation, Outlet } from 'react-router-dom'; // Dodan Outlet
+import { BrowserRouter, Routes, Route, useLocation, Outlet, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Services from './pages/Services';
@@ -16,6 +16,7 @@ import { LanguageProvider } from './context/LanguageContext';
 import Login from './admin/Login';
 import ProtectedRoute from './admin/ProtectedRoute';
 import AdminBlog from './admin/AdminBlog';
+import AdminLoyalty from './admin/AdminLoyalty';
 
 const ScrollToHashElement = () => {
   const { pathname, hash } = useLocation();
@@ -58,7 +59,10 @@ function App() {
                 <Route path="/storitve" element={<Services />} />
                 <Route path="/o-nas" element={<About />} />
                 <Route path="/darila" element={<Gifts />} />
-                <Route path="/rezervacija" element={<Booking />} />
+                {/* --- ZAČASNO IZKLOPLJENA JAVNA REZERVACIJA ---
+                <Route path="/rezervacija" element={<Booking />} /> 
+                ---------------------------------------------- */}
+                <Route path="/rezervacija" element={<Navigate to="/" replace />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:id" element={<BlogPost />} />
               </Route>
@@ -68,8 +72,12 @@ function App() {
               <Route element={<ProtectedRoute />}>
                   <Route path="/admin" element={<AdminLayout />}>
                       <Route index element={<Dashboard />} />
+                      {/* --- ZAČASNO IZKLOPLJEN ADMIN ZA REZERVACIJE ---
                       <Route path="rezervacije" element={<AdminReservations />} />
+                      ------------------------------------------------ */}
+                      <Route path="rezervacije" element={<Navigate to="/admin" replace />} />
                       <Route path="blog" element={<AdminBlog />} />
+                      <Route path="loyalty" element={<AdminLoyalty />} />
                   </Route>
               </Route>
             </Routes>

@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import logoImg from '../assets/logo.jpeg';
+import logoImg from '../assets/logo.png';
 import { useLanguage } from '../context/LanguageContext'; 
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const [showPhoneModal, setShowPhoneModal] = useState(false);
 
   const { language, switchLanguage, t } = useLanguage(); 
 
@@ -111,9 +113,14 @@ const Navbar = () => {
             if (item.isButton) {
                 return (
                   <li key={index} className="nav-item">
-                    <Link to={item.link} className="nav-book-btn" onClick={closeMobileMenu}>
+                    <button className="nav-book-btn" 
+                      onClick={() => {
+                        closeMobileMenu();
+                        setShowPhoneModal(true);
+                      }}
+                    >
                       {item.title}
-                    </Link>
+                    </button>
                   </li>
                 );
               }
@@ -153,6 +160,29 @@ const Navbar = () => {
               );
         })}
       </ul>
+
+      {showPhoneModal && (
+        <div className="modal-overlay" style={{ zIndex: 9999 }}>
+          <div className="modal-content phone-modal-content">
+            <h2 className="phone-modal-title">{t.popUp.title}</h2>
+            
+            <p className="phone-modal-text">
+              {t.popUp.text}
+            </p>
+            
+            <a href="tel:+38657313320" className="phone-modal-link">
+              📞 +386 5 731 33 20
+            </a>
+
+            <div className="phone-modal-actions">
+              <button onClick={() => setShowPhoneModal(false)} className="btn-secondary">
+                {t.popUp.closeBtn}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
     </nav>
   );
 };

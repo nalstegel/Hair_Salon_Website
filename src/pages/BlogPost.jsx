@@ -46,11 +46,7 @@ const BlogPost = () => {
 
         <div className="post-content" dangerouslySetInnerHTML={{ __html: content }}></div>
 
-        <div className="post-footer">
-          <div className="section-divider"></div>
-          <p>{likeText}</p>
-          <Link to="/rezervacija" className="career-btn mt-20">{bookText}</Link>
-        </div>
+        <div className="section-divider"></div>
       </article>
     </div>
   );

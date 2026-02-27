@@ -56,9 +56,9 @@ export const translations = {
       sat: "Sobota:",
       sunClosed: "Nedelja in prazniki:",
       closed: "Zaprto",
-      booking: "Naročanje",
-      onlineBooking: "Online rezervacija",
-      phoneBooking: "Telefonsko naročanje",
+      //booking: "Naročanje",
+      //onlineBooking: "Online rezervacija",
+      //phoneBooking: "Telefonsko naročanje",
       rights: "Vse pravice pridržane."
     },
     colourService: {
@@ -81,7 +81,41 @@ export const translations = {
         "priporočila za domačo nego"
       ],
       resultLabel: "Rezultat:",
-      resultText: "dolgotrajna barva, sijaj in zdravi lasje."
+      resultText: "dolgotrajna barva, sijaj in zdravi lasje.",
+      packagesTitle: "KOLORIST PAKETI",
+      packages: [
+        {
+          name: "🎨 KOLORIST LIVE PAKET",
+          price: "50 €",
+          period: "/ mesec",
+          subtitle: "Kaj je vključeno v vaš paket:",
+          features: [
+            "Eno barvanje narastka ali poltrajna barva mesečno",
+            "En regeneracijski tretma z masažo lasišča mesečno",
+            "Red Plex zaščita las med barvanjem",
+            "20 % popusta na izdelke Red Cat",
+            "15 % popusta na storitve glajenja las",
+            "10 % popusta na dodatne koloristične storitve"
+          ],
+          note: "Opomba: Paket vključuje sistem zaščite las Red Plex. Darilna kartica ni vključena.",
+          isPremium: false
+        },
+        {
+          name: "PAKET SENIOR KOLORIST",
+          price: "60 €",
+          period: "/ mesec",
+          subtitle: "Kaj vključuje paket:",
+          features: [
+            "Eno barvanje narastka ali preliv mesečno",
+            "Gratis feniranje ob vsaki storitvi",
+            "Red Cat šampon (darilo v vrednosti 18€)",
+            "Red Cat keratinski tretma za nego las – GRATIS",
+            "Profesionalna nega in svetovanje senior kolorista"
+          ],
+          note: "Popolno mesečno vzdrževanje barve, sijaja in zdravja vaših las — vse v enem paketu.",
+          isPremium: true
+        }
+      ]
     },
     colourClub: {
       title: "The Colour Club",
@@ -96,7 +130,63 @@ export const translations = {
         "strokovno spremljanje stanja las"
       ],
       highlight: "Kot razvojni salon RedCat vam zagotavljamo dostop do najnovejših formul in tehnologij.",
-      resultText: "Barva, ki vam popolnoma ustreza – skozi vse leto."
+      resultText: "Barva, ki vam popolnoma ustreza – skozi vse leto.",
+      packagesTitle: "IZBERITE SVOJ PAKET",
+      packages: [
+        {
+          name: "COLOR BASIC",
+          price: "39 €",
+          period: "/ mesec",
+          features: [
+            "1× mesečno barvanje narastka z Red Cat barvo",
+            "Negovalni tretma po barvanju",
+            "Sproščujoča masaža lasišča",
+            "Feniranje vključeno",
+            "15 % popust na Red Cat izdelke"
+          ],
+          note: "Idealno za redno vzdrževanje barve.",
+          isPremium: false
+        },
+        {
+          name: "COLOR PLUS",
+          price: "49 €",
+          period: "/ mesec",
+          features: [
+            "1× mesečno celotno barvanje las z Red Cat barvo",
+            "Profesionalni negovalni tretma Red Cat",
+            "Masaža lasišča",
+            "Feniranje vključeno",
+            "15 % popust na Red Cat izdelke",
+            "Prednostno naročanje termina"
+          ],
+          note: "Popolna izbira za enakomerno barvo in zdrav videz las.",
+          isPremium: false
+        },
+        {
+          name: "💎 COLOR PREMIUM",
+          price: "59 €",
+          period: "/ mesec",
+          features: [
+            "1× mesečno celotno barvanje las ali osvežitev barve",
+            "Intenzivni obnovitveni tretma Red Cat",
+            "Podaljšana masaža lasišča",
+            "Feniranje vključeno",
+            "15 % popust na Red Cat izdelke",
+            "Ekskluzivne članske ugodnosti"
+          ],
+          note: "Najvišja raven nege za popolnoma sijoče in zdrave lase.",
+          isPremium: true
+        }
+      ],
+      whyChooseTitle: "Zakaj izbrati Mitja Color Klub?",
+      whyChooseList: [
+        "Vedno urejena barva brez skrbi",
+        "Feniranje vključeno ob vsakem obisku",
+        "Profesionalni Red Cat izdelki",
+        "Redna salonska nega skozi celo leto",
+        "Posebne ugodnosti za člane"
+      ],
+      footerSlogan: "Lepi lasje se začnejo z redno nego."
     },
     blowDryClub: {
       title: "The Blow Dry Club",
@@ -158,7 +248,7 @@ export const translations = {
         "razvoj in prodaja mreže salonov (1999–2014)",
         "profesionalna blagovna znamka RedCat",
         "sodelovanje z mednarodnimi partnerji",
-        "več kot 15.000 stalnih strank skozi program zvestobe",
+        "večవర 15.000 stalnih strank skozi program zvestobe",
         "stalne inovacije in razvoj"
       ],
       conclusion: "Naša največja nagrada je zaupanje strank.",
@@ -233,21 +323,22 @@ export const translations = {
         {
           title: "Frizerske storitve – osnovno",
           items: [
-            { name: "Konsultacija", price: "3 €" },
+            { name: "Konsultacija", price: "5 €" },
             { name: "Masaža lasišča", price: "5 €" },
             { name: "Umivanje z masažo + balzam", price: "5 €" },
-            { name: "Striženje s škarjami", price: "10 €" },
+            { name: "Moško striženje s škarjami", price: "15 €" },
+            { name: "Moško striženje moderno - fade", price: "18 €" },
             { name: "Striženje s strojčkom", price: "10 €" },
-            { name: "Striženje + pranje", price: "13 €" },
-            { name: "Striženje dolgo / zelo dolgo", price: "13–15 €" },
-            { name: "Striženje otrok (fantki)", price: "11 €" },
-            { name: "Sušenje", price: "6 €" },
-            { name: "Fen frizura", price: "9 €" },
-            { name: "Ravnanje", price: "10 €" },
-            { name: "Fen + likanje", price: "17 €" },
-            { name: "Kodri / svečana frizura", price: "20–30 €" },
-            { name: "Pranje + fen", price: "12 €" },
-            { name: "Pranje + sušenje", price: "10 €" }
+            { name: "Žensko striženje + umivanje + sušenje", price: "29 €" },
+            { name: "Žensko striženje dolgo / zelo dolgo", price: "17 €" },
+            { name: "Striženje otrok (fantki / deklice)", price: "12 / 13 €" },
+            { name: "Sušenje", price: "9 €" },
+            { name: "Fen frizura", price: "18 - 21 €" },
+            { name: "Ravnanje", price: "15 - 20 €" },
+            { name: "Fen + likanje", price: "30 €" },
+            { name: "Kodri", price: "20 - 24 €" },
+            { name: "Svečane frizure", price: "50 €" },
+            { name: "Umivanje + sušenje", price: "12 €" }
           ]
         },
         {
@@ -257,9 +348,9 @@ export const translations = {
             { name: "Barvanje srednji lasje", price: "35 €" },
             { name: "Barvanje dolgi lasje", price: "40 €" },
             { name: "Barvanje zelo dolgi", price: "50 €" },
-            { name: "Prameni kratki", price: "30 €" },
+            { name: "Prameni kratki", price: "35 €" },
             { name: "Prameni srednji", price: "40 €" },
-            { name: "Prameni dolgi", price: "50 €" },
+            { name: "Prameni dolgi", price: "45 €" },
             { name: "Prameni zelo dolgi", price: "70 €" },
             { name: "Balayage / Ombre", price: "50–70 €" },
             { name: "Toniranje", price: "20 €" },
@@ -272,7 +363,7 @@ export const translations = {
           items: [
             { name: "Keratin", price: "100 €" },
             { name: "Botox za lase", price: "40 €" },
-            { name: "Olaplex tretma", price: "20 €" },
+            { name: "Redplex tretma", price: "20 €" },
             { name: "Lamelarna nega", price: "15 €" },
             { name: "KeraVive / posebne nege", price: "20 €" },
             { name: "Detox lasišča", price: "15 €" },
@@ -284,7 +375,7 @@ export const translations = {
           items: [
             { name: "1 minuta", price: "1 €" },
             { name: "Paket 30 min", price: "25 €" },
-            { name: "Paket 60 min", price: "50 €" },
+            { name: "Paket 60 min", price: "55 €" },
             { name: "Paket 100 min", price: "80 €" }
           ]
         },
@@ -297,6 +388,11 @@ export const translations = {
           ]
         }
       ]
+    },
+    popUp: {
+      title: "Rezervacija termina",
+      text: "Za rezervacijo termina nas prosim pokličite na:",
+      closeBtn: "Zapri"
     }
   },
   it: {
@@ -381,7 +477,41 @@ export const translations = {
         "raccomandazioni per la cura a casa"
       ],
       resultLabel: "Risultato:",
-      resultText: "colore duraturo, lucentezza e capelli sani."
+      resultText: "colore duraturo, lucentezza e capelli sani.",
+      packagesTitle: "PACCHETTI COLORISTI",
+      packages: [
+        {
+          name: "🎨 PACCHETTO KOLORIST LIVE",
+          price: "50 €",
+          period: "/ mese",
+          subtitle: "Cosa include il tuo pacchetto:",
+          features: [
+            "Una colorazione ricrescita o colore semipermanente al mese",
+            "Un trattamento rigenerante con massaggio del cuoio capelluto al mese",
+            "Protezione capelli Red Plex durante la colorazione",
+            "Sconto del 20% sui prodotti Red Cat",
+            "Sconto del 15% sui servizi liscianti",
+            "Sconto del 10% sui servizi colore aggiuntivi"
+          ],
+          note: "Nota: Il pacchetto include il sistema di protezione Red Plex. Gift card esclusa.",
+          isPremium: false
+        },
+        {
+          name: "PACCHETTO SENIOR KOLORIST",
+          price: "60 €",
+          period: "/ mese",
+          subtitle: "Cosa include il pacchetto:",
+          features: [
+            "Una colorazione ricrescita o riflessante al mese",
+            "Piega in omaggio ad ogni servizio",
+            "Shampoo Red Cat (in regalo, valore 18€)",
+            "Trattamento alla cheratina Red Cat – GRATIS",
+            "Cura e consulenza professionale di un colorista senior"
+          ],
+          note: "Mantenimento mensile perfetto per colore, lucentezza e salute dei tuoi capelli in un unico pacchetto.",
+          isPremium: true
+        }
+      ]
     },
     colourClub: {
       title: "The Colour Club",
@@ -396,7 +526,63 @@ export const translations = {
         "monitoraggio professionale della salute dei capelli"
       ],
       highlight: "Come salone di sviluppo RedCat, garantiamo l'accesso alle formule e tecnologie più recenti.",
-      resultText: "Il colore che ti si addice perfettamente – tutto l'anno."
+      resultText: "Il colore che ti si addice perfettamente – tutto l'anno.",
+      packagesTitle: "SCEGLI IL TUO PACCHETTO",
+      packages: [
+        {
+          name: "COLOR BASIC",
+          price: "39 €",
+          period: "/ mese",
+          features: [
+            "1× ritocco ricrescita al mese con colore Red Cat",
+            "Trattamento curativo dopo la colorazione",
+            "Massaggio rilassante al cuoio capelluto",
+            "Piega inclusa",
+            "Sconto del 15% sui prodotti Red Cat"
+          ],
+          note: "Ideale per il mantenimento regolare del colore.",
+          isPremium: false
+        },
+        {
+          name: "COLOR PLUS",
+          price: "49 €",
+          period: "/ mese",
+          features: [
+            "1× colore completo al mese con colore Red Cat",
+            "Trattamento curativo professionale Red Cat",
+            "Massaggio al cuoio capelluto",
+            "Piega inclusa",
+            "Sconto del 15% sui prodotti Red Cat",
+            "Prenotazione prioritaria dell'appuntamento"
+          ],
+          note: "La scelta perfetta per un colore uniforme e capelli sani.",
+          isPremium: false
+        },
+        {
+          name: "💎 COLOR PREMIUM",
+          price: "59 €",
+          period: "/ mese",
+          features: [
+            "1× colore completo o ritocco al mese",
+            "Trattamento rigenerante intensivo Red Cat",
+            "Massaggio prolungato al cuoio capelluto",
+            "Piega inclusa",
+            "Sconto del 15% sui prodotti Red Cat",
+            "Vantaggi esclusivi per i membri"
+          ],
+          note: "Il massimo livello di cura per capelli perfettamente lucenti e sani.",
+          isPremium: true
+        }
+      ],
+      whyChooseTitle: "Perché scegliere il Mitja Color Klub?",
+      whyChooseList: [
+        "Colore sempre perfetto senza pensieri",
+        "Piega inclusa ad ogni visita",
+        "Prodotti professionali Red Cat",
+        "Cura regolare in salone tutto l'anno",
+        "Vantaggi speciali per i membri"
+      ],
+      footerSlogan: "I bei capelli iniziano con una cura regolare."
     },
     blowDryClub: {
       title: "The Blow Dry Club",
@@ -531,36 +717,37 @@ export const translations = {
       subtitle: "Servizi eccellenti a prezzi accessibili",
       categories: [
         {
-          title: "Servizi parrucchiere – base",
+          title: "Servizi di parrucchiere – base",
           items: [
-            { name: "Consulenza", price: "3 €" },
-            { name: "Massaggio del cuoio capelluto", price: "5 €" },
+            { name: "Consulenza", price: "5 €" },
+            { name: "Massaggio al cuoio capelluto", price: "5 €" },
             { name: "Lavaggio con massaggio + balsamo", price: "5 €" },
-            { name: "Taglio a forbice", price: "10 €" },
-            { name: "Taglio a macchinetta", price: "10 €" },
-            { name: "Taglio + lavaggio", price: "13 €" },
-            { name: "Taglio lunghi / molto lunghi", price: "13–15 €" },
-            { name: "Taglio bambino (maschio)", price: "11 €" },
-            { name: "Asciugatura", price: "6 €" },
-            { name: "Piega a phon", price: "9 €" },
-            { name: "Stiratura", price: "10 €" },
-            { name: "Piega + piastra", price: "17 €" },
-            { name: "Ricci / acconciatura da sera", price: "20–30 €" },
-            { name: "Lavaggio + piega", price: "12 €" },
-            { name: "Lavaggio + asciugatura", price: "10 €" }
+            { name: "Taglio uomo a forbice", price: "15 €" },
+            { name: "Taglio uomo moderno - fade", price: "18 €" },
+            { name: "Taglio con macchinetta", price: "10 €" },
+            { name: "Taglio donna + lavaggio + asciugatura", price: "29 €" },
+            { name: "Taglio donna capelli lunghi / molto lunghi", price: "17 €" },
+            { name: "Taglio bambino (bimbo / bimba)", price: "12 / 13 €" },
+            { name: "Asciugatura", price: "9 €" },
+            { name: "Messa in piega", price: "18 - 21 €" },
+            { name: "Piastra", price: "15 - 20 €" },
+            { name: "Piega + piastra", price: "30 €" },
+            { name: "Ricci", price: "20 - 24 €" },
+            { name: "Acconciature da cerimonia", price: "50 €" },
+            { name: "Lavaggio + asciugatura", price: "12 €" }
           ]
         },
         {
           title: "Colorazione",
           items: [
-            { name: "Colorazione capelli corti", price: "30 €" },
-            { name: "Colorazione capelli medi", price: "35 €" },
-            { name: "Colorazione capelli lunghi", price: "40 €" },
-            { name: "Colorazione molto lunghi", price: "50 €" },
-            { name: "Mèches capelli corti", price: "30 €" },
+            { name: "Colore capelli corti", price: "30 €" },
+            { name: "Colore capelli medi", price: "35 €" },
+            { name: "Colore capelli lunghi", price: "40 €" },
+            { name: "Colore capelli molto lunghi", price: "50 €" },
+            { name: "Mèches capelli corti", price: "35 €" },
             { name: "Mèches capelli medi", price: "40 €" },
-            { name: "Mèches capelli lunghi", price: "50 €" },
-            { name: "Mèches molto lunghi", price: "70 €" },
+            { name: "Mèches capelli lunghi", price: "45 €" },
+            { name: "Mèches capelli molto lunghi", price: "70 €" },
             { name: "Balayage / Ombre", price: "50–70 €" },
             { name: "Tonalizzazione", price: "20 €" },
             { name: "Decolorazione", price: "35 €" },
@@ -568,15 +755,15 @@ export const translations = {
           ]
         },
         {
-          title: "Cura e trattamenti speciali",
+          title: "Cura e trattamenti",
           items: [
             { name: "Cheratina", price: "100 €" },
-            { name: "Botox per capelli", price: "40 €" },
-            { name: "Trattamento Olaplex", price: "20 €" },
+            { name: "Botox capillare", price: "40 €" },
+            { name: "Trattamento Redplex", price: "20 €" },
             { name: "Trattamento lamellare", price: "15 €" },
-            { name: "KeraVive / cure speciali", price: "20 €" },
-            { name: "Detox del cuoio capelluto", price: "15 €" },
-            { name: "Peeling del cuoio capelluto", price: "10 €" }
+            { name: "KeraVive / trattamenti speciali", price: "20 €" },
+            { name: "Detox cuoio capelluto", price: "15 €" },
+            { name: "Peeling cuoio capelluto", price: "10 €" }
           ]
         },
         {
@@ -584,19 +771,24 @@ export const translations = {
           items: [
             { name: "1 minuto", price: "1 €" },
             { name: "Pacchetto 30 min", price: "25 €" },
-            { name: "Pacchetto 60 min", price: "50 €" },
+            { name: "Pacchetto 60 min", price: "55 €" },
             { name: "Pacchetto 100 min", price: "80 €" }
           ]
         },
         {
           title: "Extension",
           items: [
-            { name: "Extension in cheratina", price: "da 300 €" },
-            { name: "Extension biadesive (Tape)", price: "da 150 €" },
+            { name: "Extension alla cheratina", price: "da 300 €" },
+            { name: "Extension a nastro (tape)", price: "da 150 €" },
             { name: "Correzione extension", price: "da 100 €" }
           ]
         }
       ]
+    },
+    popUp: {
+      title: "Prenotazione appuntamento",
+      text: "Per prenotare un appuntamento, vi preghiamo di chiamarci. Saremo lieti di accogliervi!",
+      closeBtn: "Chiudi"
     }
   }
 };
