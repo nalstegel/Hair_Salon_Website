@@ -13,6 +13,7 @@ A full-stack web application built for a premium hair salon. It features a clien
 * 🔒 **Secure Dashboard:** JWT-based authentication for salon managers.
 * 📝 **Appointment Management:** View, edit, and delete client bookings.
 * ✍️ **Blog Editor:** Custom CMS to write, edit, and publish dual-language blog posts with HTML support.
+* 🏆 **Loyalty program:** View, add, edit loyal customers & their sum of money spent.
 
 ## 🛠️ Tech Stack
 
